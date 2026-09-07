@@ -3,14 +3,14 @@ requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "autopp"
+name = "auto-pixel-people"
 version = "0.1.0"
 description = "Automation scripts for the Android game Pixel People using ADB and OpenCV"
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
 authors = [
-    { name = "autopp contributors" }
+    { name = "app contributors" }
 ]
 keywords = [
     "pixel-people",
@@ -38,7 +38,7 @@ dependencies = [
 ]
 
 [project.urls]
-Repository = "https://github.com/yourusername/autopp"
+Repository = "https://github.com/simonreise/auto-pixel-people"
 
 [tool.setuptools]
 py-modules = ["actions", "animals", "screen", "utopium"]

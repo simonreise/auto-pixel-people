@@ -1,4 +1,4 @@
-# AutoPP (Pixel People Automation)
+# Auto Pixel People
 
 Automation scripts for the Android game **Pixel People** powered by [adbutils](https://github.com/openatx/adbutils) and [OpenCV](https://opencv.org/).
 
@@ -41,8 +41,8 @@ Automation scripts for the Android game **Pixel People** powered by [adbutils](h
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/autopp.git
-   cd autopp
+   git clone https://github.com/simonreise/auto-pixel-people.git
+   cd auto-pixel-people
    ```
 
 2. **Create and activate a virtual environment:**
@@ -93,7 +93,7 @@ If you are using a device with a different screen resolution or scale:
 ## Project Structure
 
 ```text
-autopp/
+auto-pixel-people/
 ├── actions.py             # Basic swipe actions
 ├── animals.py             # Heart collection loop
 ├── notification_tree.png  # Template image for tree bubble matching
