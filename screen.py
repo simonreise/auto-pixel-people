@@ -129,6 +129,21 @@ def check_heart(d):
     d.click(900, 630)
 
 
+def check_heart_instant(d):
+    """Check and collect the heart with first wonder unlocked."""
+    # Check if heart available
+    while not heart_available(d):
+        time.sleep(1)
+    d.click(970, 380)
+    time.sleep(5)
+    d.click(0.5, 0.52)
+    time.sleep(2)
+    d.swipe(930, 1800, 930, 1800, 0.1)
+    time.sleep(1)
+    img = screenshot(d)
+    close_notification(d, img)
+
+
 def heart_available(d):
     """Check if any heart is available for collecting."""
     img = screenshot(d)

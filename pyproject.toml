@@ -41,7 +41,7 @@ dependencies = [
 Repository = "https://github.com/simonreise/auto-pixel-people"
 
 [tool.setuptools]
-py-modules = ["actions", "animals", "screen", "utopium"]
+py-modules = ["actions", "animals", "animals_instant", "screen", "utopium"]
 
 [tool.setuptools.package-data]
 "*" = ["*.png"]

@@ -15,6 +15,10 @@ Automation scripts for the Android game **Pixel People** powered by [adbutils](h
   - Monitors the screen to detect when a heart is ready for collection.
   - Opens the heart mini-game, identifies heart positions using edge detection (Gaussian blur + Canny filter), and collects them to obtain new animals.
 
+- **Instant Heart & Animal Collector (`animals_instant.py`)**:
+  - Optimized for players who have unlocked the **first wonder**.
+  - Bypasses the heart-rubbing mini-game, claiming hearts instantly and dismissing popups as soon as hearts are ready.
+
 - **Fast Computer Vision (`screen.py`)**:
   - Pre-scaled template matching with morphological local peak detection for efficient and duplicate-free bubble targeting.
   - Configurable matching thresholds and scale factors.
@@ -74,10 +78,16 @@ Runs an infinite loop swiping across the town and popping tree notification bubb
 python utopium.py
 ```
 
-### Collect Hearts and Animals
-Monitors and claims hearts as soon as they appear:
+### Collect Hearts and Animals (Standard)
+Monitors and claims hearts by playing the mini-game:
 ```bash
 python animals.py
+```
+
+### Collect Hearts and Animals (Instant / First Wonder)
+If you have unlocked the first wonder, use this script to claim hearts instantly without the mini-game:
+```bash
+python animals_instant.py
 ```
 
 ---
@@ -86,7 +96,7 @@ python animals.py
 
 If you are using a device with a different screen resolution or scale:
 - **Bubble Template Scale**: Adjust `SCALES` in `screen.py` (e.g. `[0.78, 0.80]` for 2340x1080).
-- **Coordinates**: Update the tap / swipe coordinates in `actions.py` and `screen.py` (`check_heart`, `close_notification`, etc.) to match your device resolution.
+- **Coordinates**: Update the tap / swipe coordinates in `actions.py` and `screen.py` (`check_heart`, `check_heart_instant`, `close_notification`, etc.) to match your device resolution.
 
 ---
 
@@ -95,7 +105,8 @@ If you are using a device with a different screen resolution or scale:
 ```text
 auto-pixel-people/
 ├── actions.py             # Basic swipe actions
-├── animals.py             # Heart collection loop
+├── animals.py             # Heart collection loop (standard with mini-game)
+├── animals_instant.py     # Heart collection loop (instant with first wonder)
 ├── notification_tree.png  # Template image for tree bubble matching
 ├── screen.py              # Screenshot taking, template matching, and heart detection
 ├── utopium.py             # Utopium harvesting loop
