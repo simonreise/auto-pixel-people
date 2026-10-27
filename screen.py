@@ -140,8 +140,8 @@ def check_heart_instant(d):
     time.sleep(2)
     d.swipe(930, 1800, 930, 1800, 0.1)
     time.sleep(1)
-    img = screenshot(d)
-    close_notification(d, img)
+    time.sleep(1)
+    d.click(900, 630)
 
 
 def heart_available(d):
